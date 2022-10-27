@@ -16,7 +16,7 @@
     // })
     TweenMax.to(".overlay ",2,{
         delay:2,
-        top: "-100%",
+        top: "-150%",
         ease:Power4.easeInOut
     })
     TweenMax.from(".logo",2,{
