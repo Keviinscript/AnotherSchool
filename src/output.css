@@ -2765,7 +2765,7 @@ html {
 /* ABOUT US */
 
 .aboutusbg{
-  background:linear-gradient( rgba(4, 9, 30, 0.7),rgba(4, 9, 30, 0.7)),url(./img/banner/DSC_3408.JPG);
+  background:linear-gradient( rgba(4, 9, 30, 0.7),rgba(4, 9, 30, 0.7)),url(./img/herobg.jpg);
   height: 80vh;
   background-position: center top;
   background-size: cover;
@@ -2776,7 +2776,7 @@ html {
 
 @media screen and (max-width:500px) {
   .aboutusbg{
-    background:linear-gradient( rgba(4, 9, 30, 0.7),rgba(4, 9, 30, 0.7)),url(./img/banner/DSC_3408.JPG);
+    background:linear-gradient( rgba(4, 9, 30, 0.7),rgba(4, 9, 30, 0.7)),url(./img/herobg.jpg);
     height: 60vh;
     background-position: center bottom;
     background-size: cover;
@@ -2787,7 +2787,7 @@ html {
 }
 
 .aboutsecondbg {
-  background: linear-gradient( rgba(4, 9, 30, 0.7),  rgba(4, 9, 30, 0.7)),  url(./img/gallery/DSC_3310.JPG);
+  background: linear-gradient( rgba(4, 9, 30, 0.7),  rgba(4, 9, 30, 0.7)),  url(./img/herobg.jpg);
   height: 90vh;
   background-position: center top;
   background-size: cover;
@@ -2798,7 +2798,7 @@ html {
 
 @media screen and (min-width: 1024px) {
   .aboutsecondbg {
-    background: linear-gradient( rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),  url(./img/gallery/DSC_3310.JPG);
+    background: linear-gradient( rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),  url(./img/herobg.jpg);
     height: 70vh;
     background-position: center top;
     background-size: cover;
@@ -2815,7 +2815,7 @@ html {
 /* Admission Inquiry */
 
 .admissionsecondbg {
-  background: linear-gradient( rgba(4, 9, 30, 0.7),  rgba(4, 9, 30, 0.7)),  url(./img/banner/P1010711.JPG);
+  background: linear-gradient( rgba(4, 9, 30, 0.7),  rgba(4, 9, 30, 0.7)),  url(./img/herobg.jpg);
   height: 30vh;
   background-position: center top;
   background-size: cover;
@@ -2833,23 +2833,13 @@ html {
 /* Gallery */
 
 .gallerybg{
-  background:linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),url(./img/banner/DSC_3408.JPG);
+  background:linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),url(./img/herobg.jpg);
   height: 60vh;
   background-position: center top;
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
   border-bottom: #FFFFFF;
-}
-
-.zoom {
-  transition: transform .2s;
-}
-
-.zoom:hover {
-  /* IE 9 */
-  /* Safari 3-8 */
-  transform: scale(1.5);
 }
 
 .icon {
@@ -2965,6 +2955,101 @@ html {
   /* max-width: 100%; */
   height: 400px;
   /* width: 275px; */
+}
+
+.formbg{
+  background-image: url(./img/gallery-bg.jpg);
+}
+
+/* The Modal (background) */
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 99999999;
+  /* Sit on top */
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0,0,0);
+  /* Fallback color */
+  background-color: rgba(0,0,0,0.9);
+  /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+
+.modal-content {
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; */
+  width: 500px;
+  max-width: 100%;
+  -webkit-animation-name: zoom;
+          animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {
+    transform:scale(0)
+  }
+
+  to {
+    transform:scale(1)
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform:scale(0)
+  }
+
+  to {
+    transform:scale(1)
+  }
+}
+
+/* The Close Button */
+
+.closes {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  /* transition: 0.3s; */
+}
+
+.closes:hover,
+.closes:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
 }
 
 .hover\:translate-x-5:hover {
@@ -3397,4 +3482,3 @@ html {
     line-height: 1.5rem;
   }
 }
-
