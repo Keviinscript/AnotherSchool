@@ -8,6 +8,40 @@ setTimeout(function(){
     document.body.style.overflow = 'visible'
 },4800)
 
+const galleryImage = document.querySelectorAll('.galleryimg'),
+      galleryZoom = document.querySelectorAll('.imagezoom'),
+      zoomIcon = document.querySelectorAll('.imagezoom i'),
+      modalImg = document.getElementById("img01"),
+      captionText = document.getElementById("caption"),
+      modal = document.getElementById("myModal");   
+      
+galleryImage.forEach((img , index) => {
+    img.addEventListener('mouseover', () => {
+        // console.log(galleryZoom[index])
+        galleryZoom[index].classList.remove('iconup')
+        galleryZoom[index].classList.add('icondown')
+        
+    })
+    img.addEventListener('mouseout', () => {
+        galleryZoom[index].classList.add('iconup')
+        galleryZoom[index].classList.remove('icondown')
+    })
+    img.children[1].addEventListener('click',() => {
+        console.log(img.children[0])
+        modal.style.display ='block';
+        modalImg.src = img.children[0].src
+    } )
+}) 
+
+
+
+// Get the <span> element that closes the modal
+const span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
 
 //REVEAL ELEMENTS 
 function reveal() {

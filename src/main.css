@@ -1274,3 +1274,117 @@ html {
     width: 100%;
   }
 }
+.gallery-item img{
+  max-width: 100%;
+  width: 326px;
+  height: 275px;
+}
+.gallery-item-img:hover{
+  transition: filter .2s ease-in-out;
+  filter: grayscale(100%);
+}
+.imagezoom i{
+  color: #fff;
+  font-size: 20px;
+}
+.iconup{
+  top: 0;
+  opacity: 0;
+  animation: iconsecond .1s ease-in;
+  animation-timing-function: cubic-bezier(.65,.27,.63,.9) ;
+}
+.icondown{
+  top: 50%;
+  opacity: 1;
+  animation: icon .1s ease-in;
+  animation-timing-function: cubic-bezier(.65,.27,.63,.9) ;
+}
+@keyframes icon {
+  from{
+    top: 0;
+    opacity: 0;
+  }
+  to{
+    top:50%;
+    opacity:1
+  }
+}
+@keyframes iconsecond {
+  from{
+    top:50%;
+    opacity:1
+  }
+  to{
+    top: 0;
+    opacity: 0;
+  }
+}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 99999999; /* Sit on top */
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; */
+  width: 500px;
+  max-width: 100%;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content{
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.closess {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  /* transition: 0.3s; */
+}
+
+.closess:hover,
+.closess:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+.center{
+  display :flex;
+  justify-content: center;
+}
