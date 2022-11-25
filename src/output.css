@@ -3241,7 +3241,7 @@ html {
 
 /* The Close Button */
 
-.close {
+.closess {
   position: absolute;
   top: 15px;
   right: 35px;
@@ -3251,8 +3251,8 @@ html {
   /* transition: 0.3s; */
 }
 
-.close:hover,
-.close:focus {
+.closess:hover,
+.closess:focus {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
